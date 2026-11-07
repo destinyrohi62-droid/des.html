@@ -21,6 +21,9 @@
 <h2><u>Details</u></h2>
 
 <table border="1">
+<tr>
+<caption> My details here</caption>
+</tr>
     <tr>
         <th>ID</th>
         <th>Name</th>
@@ -58,6 +61,17 @@
 
     <label for="lname">Password:</label><br>
     <input type="password" id="lname" name="lname" placeholder="Enter password"><br>
+    <button type="button" onclick="togglepassword()">Show password</button>
+        <script>
+            function togglepassword() {
+                const password = document.getElementById("lname");
+                if (password.type === "password") {
+                    password.type = "text";
+                } else {
+                    password.type = "password";
+                }
+            }
+        </script>
 
     <div class="password-requirements">
         <p>At least 8 characters</p>
@@ -282,8 +296,9 @@
 
 <footer>
     <p>© 2026 Destiny Tech. All rights reserved.</p>
+    <p> EMAIL: rohidestiny654@gmail.com</p>
 </footer>
-```
+
 
 </body>
 </html>
